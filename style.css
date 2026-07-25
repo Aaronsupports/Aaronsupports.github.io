@@ -740,6 +740,6 @@ p { color: var(--text-secondary); }
     position: absolute;
     width: 120%;
     left: 50%;
-    top: 45%;
+    top: 70%;
     transform: translate(-50%, -50%);
 }
