@@ -740,7 +740,7 @@ p { color: var(--text-secondary); }
     position: absolute;
     width: 125%;
     height: auto;
-    left: 53%;
+    left: 56%;
     top: 53%;
     transform: translate(-50%, -50%);
 }
