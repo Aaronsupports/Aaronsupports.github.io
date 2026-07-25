@@ -735,5 +735,5 @@ p { color: var(--text-secondary); }
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center top;
+    object-position: center top 50%;
 }
