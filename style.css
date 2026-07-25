@@ -728,10 +728,19 @@ p { color: var(--text-secondary); }
 .fact-row { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-glass); font-size: 0.9rem; }
 .fact-row dt { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
 .fact-row dd { text-align: right; color: var(--text-primary); }
-.avatar-ring {width: 220px;height: 220px; border-radius: 50%; overflow: hidden; position: relative; }
-.profile-photo { position: absolute; width: 125%; height: auto;
-    left: 52%;     
-    top: 53%;    
+.avatar-ring {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
 
+.profile-photo {
+    position: absolute;
+    width: 125%;
+    height: auto;
+    left: 52%;
+    top: 53%;
     transform: translate(-50%, -50%);
 }
