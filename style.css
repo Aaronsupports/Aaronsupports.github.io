@@ -61,8 +61,11 @@
   /* shadow / glow */
   --shadow-soft: 0 20px 60px rgba(3, 6, 16, 0.45);
   --glow-blue: 0 0 0 1px rgba(59,130,246,0.35), 0 0 32px rgba(59,130,246,0.25);
-
-  --transition: 220ms cubic-bezier(.4,0,.2,1);
+.card{
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
 }
 
 [data-theme="light"] {
@@ -390,9 +393,16 @@ p { color: var(--text-secondary); }
     margin: 0 auto 1.2rem;
     border-radius: 50%;
     overflow: hidden;
-    background: var(--accent-gradient);
-    padding: 3px;
     position: relative;
+    border: 3px solid #6c7cff;
+    background: transparent;
+}
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top 50%;
 }
 .hero-card-name { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.2rem; }
 .hero-card-role { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.4rem; }
@@ -469,12 +479,19 @@ p { color: var(--text-secondary); }
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   padding: 2rem;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+ transition:
+  transform var(--transition),
+  border-color var(--transition),
+  box-shadow var(--transition),
+  background var(--transition);
 }
 .card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(59,130,246,0.4);
-  box-shadow: var(--glow-blue);
+  background: var(--bg-elevated-2);
+  transform: translateY(-6px);
+  border-color: rgba(59,130,246,.45);
+  box-shadow:
+      var(--shadow-soft),
+      var(--glow-blue);
 }
 .card h3 { font-size: 1.08rem; margin-bottom: 0.5rem; }
 .card p { font-size: 0.94rem; margin: 0; }
@@ -720,20 +737,3 @@ p { color: var(--text-secondary); }
 .fact-row { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-glass); font-size: 0.9rem; }
 .fact-row dt { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
 .fact-row dd { text-align: right; color: var(--text-primary); }
-.avatar-ring {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto 1.2rem;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    border: 3px solid #6c7cff;
-    background: transparent;
-}
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center top 50%;
-}
