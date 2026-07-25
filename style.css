@@ -731,15 +731,13 @@ p { color: var(--text-secondary); }
 .avatar-ring {
     width: 220px;
     height: 220px;
-    border-radius: 50%;
     overflow: hidden;
-    position: relative;
+    border-radius: 32px; /* or 50% if you want a circle */
 }
 
 .profile-photo {
-    position: absolute;
-    width: 120%;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
