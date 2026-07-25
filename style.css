@@ -729,12 +729,10 @@ p { color: var(--text-secondary); }
 .fact-row dt { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
 .fact-row dd { text-align: right; color: var(--text-primary); }
 .profile-photo {
-    width: 150%;
+    width: 200%;
     height: auto;
-    margin-top: -40px;
-    margin-left: -25%;
-    transform: scale(1.12);    
-    transform-origin: center;
+    margin-top: -100px;
+    margin-left: -50%;
 }
 .avatar-ring {
     width: 220px;
