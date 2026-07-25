@@ -465,14 +465,40 @@ p { color: var(--text-secondary); }
 
 /* ---------- 9. Cards & glass ---------- */
 .glass {
-  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.045),
+    rgba(255,255,255,0.015)
+  );
+
   border: 1px solid var(--border-glass);
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+
   box-shadow: var(--shadow-soft);
 }
-[data-theme="light"] .glass { background: linear-gradient(180deg, #ffffff, #fbfcff); }
 
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.08),
+    transparent 40%
+  );
+
+  pointer-events: none;
+}
+
+[data-theme="light"] .glass {
+  background: linear-gradient(180deg, #ffffff, #fbfcff);
+}
 .card {
   position: relative;
   background: var(--bg-elevated);
@@ -490,8 +516,8 @@ p { color: var(--text-secondary); }
   transform: translateY(-6px);
   border-color: rgba(59,130,246,.45);
   box-shadow:
-      var(--shadow-soft),
-      var(--glow-blue);
+    var(--shadow-soft),
+    var(--glow-blue);
 }
 .card h3 { font-size: 1.08rem; margin-bottom: 0.5rem; }
 .card p { font-size: 0.94rem; margin: 0; }
@@ -499,12 +525,23 @@ p { color: var(--text-secondary); }
 .card-grid { display: grid; gap: 1.4rem; }
 
 .card-icon {
-  width: 46px; height: 46px;
+  width: 46px;
+  height: 46px;
   border-radius: 12px;
   background: var(--accent-gradient-soft);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--accent-cyan);
   margin-bottom: 1.2rem;
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    color var(--transition);
+}
+.card:hover .card-icon {
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* ---------- 10. Services ---------- */
