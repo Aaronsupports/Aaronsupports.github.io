@@ -741,6 +741,6 @@ p { color: var(--text-secondary); }
     width: 130%;
     height: auto;
     left: 54%;
-    top: 53%;
+    top: 55%;
     transform: translate(-50%, -50%);
 }
