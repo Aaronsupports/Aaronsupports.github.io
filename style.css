@@ -385,22 +385,14 @@ p { color: var(--text-secondary); }
   text-align: center;
 }
 .avatar-ring {
-  width: 108px; height: 108px;
-  margin: 0 auto 1.2rem;
-  border-radius: 50%;
-  background: var(--accent-gradient);
-  display: flex; align-items: center; justify-content: center;
-  padding: 3px;
-}
-.avatar-mono {
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  background: var(--bg-elevated-2);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--text-primary);
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--accent-gradient);
+    padding: 3px;
+    position: relative;
 }
 .hero-card-name { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.2rem; }
 .hero-card-role { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.4rem; }
@@ -738,9 +730,9 @@ p { color: var(--text-secondary); }
 
 .profile-photo {
     position: absolute;
-    width: 200%;
+    width: 130%;
     height: auto;
-    left: 80%;
-    top: 80%;
+    left: 54%;
+    top: 55%;
     transform: translate(-50%, -50%);
 }
