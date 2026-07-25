@@ -728,15 +728,17 @@ p { color: var(--text-secondary); }
 .fact-row { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-glass); font-size: 0.9rem; }
 .fact-row dt { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; }
 .fact-row dd { text-align: right; color: var(--text-primary); }
-.profile-photo {
-    width: 200%;
-    height: auto;
-    margin-top: -100px;
-    margin-left: -50%;
-}
 .avatar-ring {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     overflow: hidden;
 }
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+}
+
