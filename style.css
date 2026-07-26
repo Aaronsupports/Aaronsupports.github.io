@@ -395,17 +395,27 @@ p { color: var(--text-secondary); }
     overflow: hidden;
     position: relative;
 
-    /* Gradient border */
     padding: 3px;
     background: var(--accent-gradient);
 
-    /* Glowing effect */
     box-shadow:
         0 0 0 2px rgba(59,130,246,0.35),
         0 0 20px rgba(59,130,246,0.45),
         0 0 45px rgba(34,211,238,0.35);
 
     animation: avatarGlow 3s ease-in-out infinite;
+   @keyframes avatarGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 0 2px rgba(59,130,246,0.35),
+            0 0 20px rgba(59,130,246,0.45),
+            0 0 45px rgba(34,211,238,0.35);
+    }
+    50% {
+        box-shadow:
+            0 0 0 2px rgba(34,211,238,0.5),
+            0 0 30px rgba(59,130,246,0.65),
+            0 0 70px rgba(34,211,238,0.55);
 }
 .profile-photo {
     width: 100%;
