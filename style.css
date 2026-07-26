@@ -418,11 +418,13 @@ p { color: var(--text-secondary); }
             0 0 70px rgba(34,211,238,0.55);
 }
 .profile-photo {
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
-    object-position: center top 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .hero-card-name { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.2rem; }
 .hero-card-role { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.4rem; }
