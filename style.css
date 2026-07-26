@@ -445,7 +445,7 @@ p { color: var(--text-secondary); }
     /* Move image up */
     object-position: center -25px;
 
-    border-radius: 50%;
+    border-radius: 20%;
     display: block;
 }
 .avatar-ring:hover .profile-photo{
