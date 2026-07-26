@@ -61,11 +61,12 @@
   /* shadow / glow */
   --shadow-soft: 0 20px 60px rgba(3, 6, 16, 0.45);
   --glow-blue: 0 0 0 1px rgba(59,130,246,0.35), 0 0 32px rgba(59,130,246,0.25);
-.card{
-    transition:
-        transform var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition);
+   
+   :root{
+   ...
+   --shadow-soft: ...;
+   --glow-blue: ...;
+   --transition: .35s ease;
 }
 
 [data-theme="light"] {
